@@ -1,6 +1,9 @@
-// complete the given function
+function palindrome(str) {
+    const cleaned = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
 
-function palindrome(str){
+    const reversed = cleaned.split("").reverse().join("");
 
+    return cleaned === reversed;
 }
-module.exports = palindrome
+
+module.exports = palindrome;
